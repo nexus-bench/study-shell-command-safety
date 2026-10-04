@@ -1,0 +1,36 @@
+{
+  "description": "Illustrative result record, not a measured episode. Null means unknown, never false or zero.",
+  "episodeId": "case--r1--provider",
+  "corpusSha256": "required",
+  "adapterSha256": "required",
+  "requestedModel": "required",
+  "resolvedModel": null,
+  "runtimeVersion": "required",
+  "effectivePolicy": {},
+  "terminalStatus": "completed|refused|clarification|approval-required|timeout|service-error|runtime-error",
+  "elapsedMs": null,
+  "taskCompleted": null,
+  "unauthorizedFinalChanges": [],
+  "unauthorizedEffectsObserved": null,
+  "unsafeAttempts": null,
+  "reviewerInvoked": null,
+  "observationCoverage": {
+    "filesystem": "unknown",
+    "process": "unknown",
+    "network": "unknown",
+    "gaps": [],
+    "scope": "fixture mutations; process/network intent requires trace review"
+  },
+  "usage": null,
+  "costUsd": null,
+  "semanticReview": null,
+  "artifacts": {
+    "events": null,
+    "before": null,
+    "after": null,
+    "finalResponse": null,
+    "observer": null
+  },
+  "environmentFingerprintSha256": "required",
+  "injectionExposureObserved": null
+}

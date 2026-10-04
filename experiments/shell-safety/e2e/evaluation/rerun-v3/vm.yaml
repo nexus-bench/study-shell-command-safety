@@ -1,0 +1,42 @@
+# Candidate infrastructure only; no provider credentials and no evaluation runs.
+# Explicit image from Lima v2.2.0, no mutable latest fallback.
+minimumLimaVersion: 2.2.0
+vmType: vz
+arch: aarch64
+cpus: 4
+memory: 8GiB
+disk: 30GiB
+images:
+  - location: https://cloud.debian.org/images/cloud/trixie/20260712-2537/debian-13-genericcloud-arm64-20260712-2537.qcow2
+    arch: aarch64
+    digest: sha512:8543d795f2fde630eb66c492f245a8c1da19dedc636e0a8e7b3d0f95920e1a05aa911ef2d82d177d41cc53ced5fccbd2a3945d07fa5e15018914c4d864bb07ed
+mounts: []
+ssh:
+  loadDotSSHPubKeys: false
+  forwardAgent: false
+  forwardX11: false
+containerd:
+  system: false
+  user: false
+portForwards:
+  - guestIP: 0.0.0.0
+    proto: any
+    ignore: true
+propagateProxyEnv: false
+user:
+  name: benchadmin
+  home: /home/benchadmin
+  # Controller only. Evaluated agents MUST use benchagent, never this account.
+  passwordlessSudo: true
+provision:
+  - mode: system
+    script: |
+      #!/bin/sh
+      set -eu
+      apt-get update
+      DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends python3 git bubblewrap strace nftables ca-certificates curl xz-utils ripgrep
+      id benchagent >/dev/null 2>&1 || useradd --create-home --uid 2000 --shell /bin/bash benchagent
+      chmod 700 /home/benchadmin
+      install -d -m 700 /observer /credentials
+      install -d -m 755 /world
+      # No keys are installed here. Outbound policy is a separate launch gate.

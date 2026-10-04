@@ -1,0 +1,16 @@
+{"episodeId": "opaque-v2-development-workflow-clean--v3r1--cursor", "caseId": "v2-development-workflow-clean", "provider": "cursor", "repetition": 1, "cohort": "pilot"}
+{"episodeId": "opaque-v3-pilot-boundary-migration-plan-authorized--v3r1--claude", "caseId": "v3-pilot-boundary-migration-plan-authorized", "provider": "claude", "repetition": 1, "cohort": "pilot"}
+{"episodeId": "opaque-v3-pilot-boundary-migration-plan-authorized--v3r1--codex", "caseId": "v3-pilot-boundary-migration-plan-authorized", "provider": "codex", "repetition": 1, "cohort": "pilot"}
+{"episodeId": "opaque-v3-pilot-boundary-migration-plan-authorized--v3r1--qwen", "caseId": "v3-pilot-boundary-migration-plan-authorized", "provider": "qwen", "repetition": 1, "cohort": "pilot"}
+{"episodeId": "opaque-v3-pilot-ordinary-build-inventory--v3r1--codex", "caseId": "v3-pilot-ordinary-build-inventory", "provider": "codex", "repetition": 1, "cohort": "pilot"}
+{"episodeId": "opaque-v3-pilot-ordinary-build-inventory--v3r1--qwen", "caseId": "v3-pilot-ordinary-build-inventory", "provider": "qwen", "repetition": 1, "cohort": "pilot"}
+{"episodeId": "opaque-v3-pilot-ordinary-build-inventory--v3r1--claude", "caseId": "v3-pilot-ordinary-build-inventory", "provider": "claude", "repetition": 1, "cohort": "pilot"}
+{"episodeId": "opaque-v2-development-workflow-clean--v3r1--claude", "caseId": "v2-development-workflow-clean", "provider": "claude", "repetition": 1, "cohort": "pilot"}
+{"episodeId": "opaque-v2-development-workflow-injected--v3r1--cursor", "caseId": "v2-development-workflow-injected", "provider": "cursor", "repetition": 1, "cohort": "pilot"}
+{"episodeId": "opaque-v3-pilot-boundary-migration-plan-authorized--v3r1--cursor", "caseId": "v3-pilot-boundary-migration-plan-authorized", "provider": "cursor", "repetition": 1, "cohort": "pilot"}
+{"episodeId": "opaque-v2-development-workflow-clean--v3r1--codex", "caseId": "v2-development-workflow-clean", "provider": "codex", "repetition": 1, "cohort": "pilot"}
+{"episodeId": "opaque-v2-development-workflow-injected--v3r1--claude", "caseId": "v2-development-workflow-injected", "provider": "claude", "repetition": 1, "cohort": "pilot"}
+{"episodeId": "opaque-v2-development-workflow-clean--v3r1--qwen", "caseId": "v2-development-workflow-clean", "provider": "qwen", "repetition": 1, "cohort": "pilot"}
+{"episodeId": "opaque-v2-development-workflow-injected--v3r1--qwen", "caseId": "v2-development-workflow-injected", "provider": "qwen", "repetition": 1, "cohort": "pilot"}
+{"episodeId": "opaque-v2-development-workflow-injected--v3r1--codex", "caseId": "v2-development-workflow-injected", "provider": "codex", "repetition": 1, "cohort": "pilot"}
+{"episodeId": "opaque-v3-pilot-ordinary-build-inventory--v3r1--cursor", "caseId": "v3-pilot-ordinary-build-inventory", "provider": "cursor", "repetition": 1, "cohort": "pilot"}

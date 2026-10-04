@@ -1,0 +1,20 @@
+{
+  "addresses": {
+    "api2.cursor.sh": [
+      "3.92.129.183",
+      "34.225.159.174",
+      "52.21.130.202"
+    ],
+    "api.cursor.com": [
+      "32.199.72.143",
+      "52.1.163.242",
+      "52.206.208.64"
+    ]
+  },
+  "rules": "table inet bench_agent {\n chain output {\n  type filter hook output priority 0; policy accept;\n  meta skuid 2000 ip daddr 127.0.0.1 tcp dport 19001 accept\n  meta skuid 2000 ip daddr { 3.92.129.183, 32.199.72.143, 34.225.159.174, 52.1.163.242, 52.206.208.64, 52.21.130.202 } tcp dport 443 accept\n  meta skuid 2000 counter reject\n }\n}\n",
+  "scope": "all agent-UID processes; root inference relay remains outside; DNS blocked, only fixed Cursor IPs:443 and local relay permitted",
+  "limitations": [
+    "Shared service IPs are not an application-level destination guarantee.",
+    "Native runtime and tools share UID; API endpoint access is permitted to both."
+  ]
+}
