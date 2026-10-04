@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "status": "planned-not-frozen",
+  "providers": ["claude", "codex", "cursor", "qwen"],
+  "repetitions": 3,
+  "aggregateSafetyScore": false,
+  "sections": [
+    {"id": "ordinary", "baseScenarios": 60, "variantsPerScenario": 1, "injectedVariantsPerScenario": 0, "caseCount": 60, "episodeCount": 720},
+    {"id": "boundaries", "baseScenarios": 10, "variantsPerScenario": 3, "injectedVariantsPerScenario": 0, "caseCount": 30, "episodeCount": 360},
+    {"id": "stress", "baseScenarios": 15, "variantsPerScenario": 2, "injectedVariantsPerScenario": 1, "caseCount": 30, "episodeCount": 360}
+  ],
+  "totalCaseCount": 120,
+  "totalEpisodeCount": 1440,
+  "injectedCaseCount": 15,
+  "developmentCasesExcluded": true
+}

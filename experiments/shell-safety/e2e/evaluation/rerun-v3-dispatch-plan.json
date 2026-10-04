@@ -1,0 +1,54 @@
+{
+  "status": "prepared-not-authorized",
+  "launchAllowed": false,
+  "episodes": 1584,
+  "cases": 132,
+  "repetitions": 3,
+  "providers": 4,
+  "workers": {
+    "worker-a": {
+      "providers": [
+        "claude",
+        "codex"
+      ],
+      "episodes": 792,
+      "schedule": "rerun-v3-worker-a.jsonl",
+      "sha256": "7a1acdaf2a6b83a0467c45ccd4f263264d9ec11504bc5412e7c6b8a08fe95fb8"
+    },
+    "worker-b": {
+      "providers": [
+        "cursor",
+        "qwen"
+      ],
+      "episodes": 792,
+      "schedule": "rerun-v3-worker-b.jsonl",
+      "sha256": "ea2c087f06cd39268134526d2660609ed703b3328af45644746516e2440db040"
+    }
+  },
+  "maxActiveEpisodesPerWorker": 1,
+  "maxActiveEpisodesPerProvider": 1,
+  "expectedRuntimeFingerprint": {
+    "runtimeTreeSha256": "a82b1616703b3b21d01162168ee65ef15c6a39457c821c80aace880d67274341",
+    "runtimeFiles": 14779,
+    "kernel": "6.12.111+deb13-cloud-arm64",
+    "architecture": "aarch64",
+    "packageInventorySha256": "68d826784cc36de23209bc666e140b427678fbcf39f98c6454d295cd41690f55"
+  },
+  "actualValidatedVm": {
+    "cpus": 4,
+    "memoryBytes": 4294967296,
+    "architecture": "aarch64",
+    "hostMounts": []
+  },
+  "perEpisode": {
+    "cpu": 2,
+    "memoryBytes": 3221225472,
+    "pids": 256,
+    "wallSeconds": 300
+  },
+  "retryPolicy": "No automatic retries. Preserve every reservation/result; manual infrastructure classification and separate explicit authorization before an additional attempt.",
+  "workerPreflight": "Both workers passed credential-free checks and matched image/runtime at preparation. Recheck saved configuration, runtime bytes, kernel and package inventory before any provider call.",
+  "reservationPolicy": "Each episode reserved with exclusive creation before launch. Never silently skip or replace a started-without-result record; report it as incomplete and investigate.",
+  "finishPolicy": "Archive and verify every expected episode ID, preserve raw attempts, stop both VMs, then perform blinded semantic/action review.",
+  "launchProcedure": "Full evaluation is blocked by the disabled authorization record. After explicit authorization, bind that record to the freeze digest and worker names, then use full_study_runner.py; its gate verifies integrity and worker environment before credentials are read."
+}

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "status": "frozen-collection-candidate",
+  "corpusSha256": "a4747e10eaffcb49443cb6fc8898f574f7f44498315787ffdda41bd91151ceba",
+  "scheduleSha256": "3e06d21c9a55a77a25270993e5a41f4a5df36ffb7cb7d149e8e568be995f005e",
+  "seed": 20261003,
+  "cases": 120,
+  "episodes": 1440,
+  "providers": [
+    "claude",
+    "codex",
+    "cursor",
+    "qwen"
+  ],
+  "repetitions": 3,
+  "sections": {
+    "ordinary": 60,
+    "boundaries": 30,
+    "stress": 30
+  },
+  "injectedCases": 15,
+  "semanticReviewCases": 20,
+  "wallTimeLimitSeconds": 300,
+  "startClock": "immediately before native agent process/session creation",
+  "stopClock": "agent terminal status and termination of remaining episode child processes",
+  "gradingTimeIncluded": false,
+  "retryPolicy": "no outcome-driven retries; service errors remain recorded",
+  "freshEnvironmentPerEpisode": true,
+  "humanApprovalDuringRun": false,
+  "aggregateSafetyScore": false,
+  "limits": "Small synthetic fixtures; not representative of arbitrary production software work.",
+  "launchGates": [
+    "commonOuterContainment",
+    "credentialIsolation",
+    "externalObserver",
+    "matchedDevelopmentPilots",
+    "blindedRubricReview",
+    "artifactFreeze"
+  ],
+  "effectScope": "fixture mutations; unknown coverage stays null; raw process/network traces retained"
+}

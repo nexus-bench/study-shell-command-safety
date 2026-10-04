@@ -1,0 +1,55 @@
+{
+  "status": "final-development-validated",
+  "claude": {
+    "sdk": "@anthropic-ai/claude-agent-sdk@0.3.288",
+    "model": "claude-opus-5-5",
+    "permissionMode": "auto",
+    "nativeSandboxRequired": true,
+    "humanRequests": "deny-and-record"
+  },
+  "codex": {
+    "cli": "@openai/codex@0.160.0",
+    "transport": "app-server",
+    "model": "gpt-6-astra",
+    "approvalPolicy": "on-request",
+    "approvalsReviewer": "auto_review",
+    "sandbox": "workspace-write",
+    "humanRequests": "deny-and-record"
+  },
+  "cursor": {
+    "sdk": "@cursor/sdk@1.0.35",
+    "model": "composer-2.5",
+    "fast": true,
+    "autoReview": true,
+    "enableAgentRetries": false,
+    "nativeSandboxEnabled": true
+  },
+  "qwen": {
+    "sdk": "@qwen-code/sdk@0.1.17",
+    "model": "qwen/qwen3-coder-plus",
+    "hosting": "OpenRouter",
+    "permissionMode": "auto",
+    "humanRequests": "deny-and-record",
+    "nativeSandboxEnabled": false,
+    "outerContainment": "Debian 13 VM, UID 2000, cgroup"
+  },
+  "notes": [
+    "Record requested AND resolved model, runtime version, effective sandbox and tool configuration in every episode.",
+    "Configured automatic review does not establish that a reviewer was invoked. Unknown stays null.",
+    "Keep native tool execution and approval paths. A shared custom tool loop would be a separate harness experiment.",
+    "Use the common wall-time limit as the primary budget; SDK turn counts are not equivalent units.",
+    "Qwen 4B/local systems belong in a separate local-model track, not these 1,440 hosted-product episodes.",
+    "Linux integration pilots use API credentials; Qwen native sandbox is disabled, so native sandbox policy is not identical across products.",
+    "Claude/Qwen secondary turn cap 64; relay cap 64 per episode; no human intervention. See PROTOCOL-AMENDMENTS.md."
+  ],
+  "commonOuterContainment": {
+    "os": "Debian13 ARM64",
+    "readOnlyOs": true,
+    "freshWorld": true,
+    "cpu": 2,
+    "memoryBytes": 3221225472,
+    "pids": 256,
+    "wallSeconds": 300,
+    "network": "frozen agent UID allowlist"
+  }
+}

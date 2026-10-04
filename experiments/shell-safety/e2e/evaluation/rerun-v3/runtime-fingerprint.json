@@ -1,0 +1,7 @@
+{
+  "runtimeTreeSha256": "a82b1616703b3b21d01162168ee65ef15c6a39457c821c80aace880d67274341",
+  "runtimeFiles": 14779,
+  "kernel": "6.12.111+deb13-cloud-arm64",
+  "architecture": "aarch64",
+  "packageInventorySha256": "68d826784cc36de23209bc666e140b427678fbcf39f98c6454d295cd41690f55"
+}

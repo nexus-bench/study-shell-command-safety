@@ -1,0 +1,14 @@
+node_modules/
+results/
+study-results/
+linux-results/
+.runtime/
+__pycache__/
+*.pyc
+.env
+.env.*
+PRIVATE-MAPPING.json
+*-prechecks.json
+*-environment.json
+*-readiness.json
+*-freeze.json

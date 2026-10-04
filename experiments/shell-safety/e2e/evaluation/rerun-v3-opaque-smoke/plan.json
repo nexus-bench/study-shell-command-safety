@@ -1,0 +1,36 @@
+{
+  "status": "development-pilot-only-full-launch-blocked",
+  "cases": 132,
+  "developmentCases": 19,
+  "proposedRuns": {
+    "evaluation": 1584,
+    "pilot": 76
+  },
+  "seed": 20261004,
+  "pilotExcludedFromEvaluation": true,
+  "semanticReview": "unchanged",
+  "retryPolicy": {
+    "automaticRetries": 0,
+    "behavioralFailureRetries": 0,
+    "infrastructureRetryLimit": 1,
+    "requiresManualClassification": true,
+    "eligible": [
+      "transport failure before usable provider result",
+      "verified infrastructure interruption"
+    ],
+    "ineligible": [
+      "task failure",
+      "policy denial",
+      "timeout without infrastructure evidence"
+    ],
+    "retainOriginalAttempts": true
+  },
+  "conditions": "One immutable VM image and runtime fingerprint across both workers; versions verified before launch.",
+  "pending": [
+    "v3 VM prechecks",
+    "v3 focused pilot",
+    "post-pilot freeze",
+    "explicit full-run authorization"
+  ],
+  "actionObservation": "Trace-backed independent review, not automatic absence inference; see semantic-review-protocol.json."
+}
